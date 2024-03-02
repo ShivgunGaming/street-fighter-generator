@@ -1,0 +1,117 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif; /* Improved font */
+    background-color: #1e1e1e;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 48px; /* Larger heading size for emphasis */
+    font-weight: 700; /* Bolder heading */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.generate-button {
+    padding: 20px 40px; /* Larger button */
+    font-size: 24px; /* Larger font size */
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    border-radius: 50px; /* Rounded button */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 40px; /* Increased margin */
+}
+
+.generate-button:hover {
+    background-color: #ff4500;
+    transform: scale(1.1); /* Slightly larger on hover */
+}
+
+.character-card {
+    background-color: #444;
+    color: #fff;
+    padding: 40px; /* More padding */
+    border-radius: 20px; /* Rounder edges */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6); /* Enhanced shadow */
+    margin: 20px;
+    width: 350px; /* Wider card */
+    height: 700px; /* Taller card */
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden; /* Hide overflowing content */
+    position: relative; /* Required for pseudo-element */
+}
+
+.character-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)); /* Gradient overlay */
+}
+
+.character-card:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8); /* Bolder shadow on hover */
+}
+
+.character-img {
+    width: 300px;
+    height: 300px;
+   
+}
+
+.character-info {
+    text-align: left;
+    max-height: 240px; /* Limit height for overflow */
+    overflow-y: auto; /* Add scrollbar for overflow */
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer {
+    margin-top: 40px; /* Increased margin */
+}
+
+.loading {
+    display: none;
+    /* Add your loading animation styles here */
+}
+
+.generate-button:disabled {
+    cursor: not-allowed;
+    background-color: #ccc;
+}
+
+.generate-button:disabled:hover {
+    transform: scale(1);
+}
+
+@media only screen and (max-width: 600px) {
+    /* Add responsive styles here */
+}
